@@ -49,9 +49,9 @@ for directory in (
 
 # Save original responses for future parsing
 
-rawFileNord = rawDirNord / f"{snapshotDate}.json"
+rawFileNord = rawDirNord / f"{snapshotDate}-nord-raw.json"
 rawFileNord.write_bytes(responseNord.content)
-rawFileMullvad = rawDirMullvad / f"{snapshotDate}.json"
+rawFileMullvad = rawDirMullvad / f"{snapshotDate}-mullvad-raw.json"
 rawFileMullvad.write_bytes(responseMullvad.content)
 
 # Extract addresses for current use. 
@@ -79,8 +79,8 @@ for server in serversMullvad:
 
 # Save obtained IPs for current reference. No structure required, .txt should be fine.
 
-ipFileNord = ipDirNord / f"{snapshotDate}.txt"
-ipFileMullvad = ipDirMullvad / f"{snapshotDate}.txt"
+ipFileNord = ipDirNord / f"{snapshotDate}-nord-ips.txt"
+ipFileMullvad = ipDirMullvad / f"{snapshotDate}-mullvad-ips.txt"
 
 ipFileNord.write_text(
     "\n".join(sorted(ipsNord)) + "\n",

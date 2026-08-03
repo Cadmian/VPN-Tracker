@@ -2,4 +2,4 @@
 
 Work in progress.
 
-Feel free to practice `grep` in the meantime.
+Feel free to practice `grep` & `cat` in the meantime.
